@@ -1,0 +1,24 @@
+We have 
+folder_a/app_1.0
+folder_b/app_1.1
+----------------------------------
+# switch to repo A
+cd folder_a
+
+# Add repo B as a remote repository
+git remote add folderb /path/to/folder_b
+
+# Pull B's master branch into a local branch named 'b'
+git pull folderb master:b
+
+# Merge b into A's master branch
+git merge b
+
+# Switch to repo B
+cd ../folder_b
+
+# Add repo A as a remote repository
+git remote add foldera /path/to/folder_a
+
+# Pull the resulting branch into repo B's master branch
+git pull foldera master:master
