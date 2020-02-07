@@ -1,0 +1,1 @@
+git stash show -p stash@{0} > Stash0.patch
